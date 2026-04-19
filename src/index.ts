@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import weatherRoutes from './routes/weather.routes.js';
 import errorHandler from './middlewares/errorHandler.middleware.js';
 
+
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;

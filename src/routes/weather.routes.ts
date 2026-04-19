@@ -4,8 +4,9 @@ import asyncHandler from '../middlewares/asyncHandler.middleware.js';
 
 const router = express.Router();
 
-router.get('/weather/:city', asyncHandler(async (req, res) => {
-    const city = req.params.city;
+router.get('/weather/:city', asyncHandler(async (req: express.Request, res: express.Response) => {
+
+    const city = req.params.city as string;
 
     const data = await getWeather(city);
     res.json(data);    
